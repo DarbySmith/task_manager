@@ -18,4 +18,9 @@ class TasksController < ApplicationController
     require 'pry'; binding.pry
     redirect_to '/tasks'
   end
+
+  def show
+    require 'pry'; binding.pry
+    @task = Task.find(params[:id])
+  end
 end
